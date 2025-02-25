@@ -7,6 +7,8 @@ from langchain.document_loaders import DirectoryLoader, TextLoader
 from PyPDF2 import PdfReader
 
 from config import config
+from dotenv import load_dotenv
+
 
 def create_index(file_path: str) -> None:
 
@@ -37,9 +39,13 @@ def create_index(file_path: str) -> None:
 
     texts = text_splitter.split_documents(documents)
 
-    embeddings = OpenAIEmbeddings(
-        openai_api_key="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"
-    )
+    # Carregar as variáveis do arquivo .env
+load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+embeddings = OpenAIEmbeddings(
+    openai_api_key=openai_api_key
+)
     
     
 
