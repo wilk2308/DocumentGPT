@@ -146,8 +146,8 @@ python -m unittest discover
 ```
 
 ### 🔧 Configurações Específicas
-# Banco de dados vetorial: O ChromaDB salva os embeddings no diretório data/db/.
-# Logs: Habilite o modo verbose no conversation.py para mais informações durante a execução.
+ Banco de dados vetorial: O ChromaDB salva os embeddings no diretório data/db/.
+ Logs: Habilite o modo verbose no conversation.py para mais informações durante a execução.
 
 ### 🤝 Contribuições
 1. Faça um fork do projeto.
